@@ -166,7 +166,7 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
                 _bodyRect.size.height = CGFloat(open * phaseY) - _bodyRect.origin.y
                 
                 trans.rectValueToPixel(&_bodyRect)
-                
+                _bodyRect.size.height = max(_bodyRect.size.width, _bodyRect.size.height)
                 // draw body differently for increasing and decreasing entry
 
                 if open > close
@@ -178,7 +178,6 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
                     if dataSet.isDecreasingFilled
                     {
                         context.setFillColor(color.cgColor)
-                        context.fill(_bodyRect)
                     }
                     else
                     {
@@ -195,7 +194,6 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
                     if dataSet.isIncreasingFilled
                     {
                         context.setFillColor(color.cgColor)
-                        context.fill(_bodyRect)
                     }
                     else
                     {
@@ -207,8 +205,7 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
                 {
                     let color = dataSet.neutralColor ?? dataSet.color(atIndex: j)
                     
-                    context.setStrokeColor(color.cgColor)
-                    context.stroke(_bodyRect)
+                    context.setFillColor(color.cgColor)
                 }
             }
             else
@@ -268,6 +265,11 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
 
         }
 
+        let bezierPath = UIBezierPath(roundedRect: _bodyRect, cornerRadius: _bodyRect.width/2)
+        context.addPath(bezierPath.cgPath)
+        
+        context.drawPath(using: .fill)
+        
         // Post this notification to let VoiceOver account for the redrawn frames
         accessibilityPostLayoutChangedNotification()
 
