@@ -664,6 +664,7 @@
 					};
 					5B57BBAE1A9B26AA0036A6CC = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 29ECX39VK2;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
@@ -1058,12 +1059,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 29ECX39VK2;
 				FRAMEWORK_SEARCH_PATHS = "$(SOURCE_ROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dcg.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rani.chartsdemoswift;
 				PRODUCT_NAME = "ChartsDemo-iOS";
+				PROVISIONING_PROFILE_SPECIFIER = "Charts Development";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
 				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/ChartsDemo-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
@@ -1078,12 +1082,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 29ECX39VK2;
 				FRAMEWORK_SEARCH_PATHS = "$(SOURCE_ROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dcg.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rani.chartsdemoswift;
 				PRODUCT_NAME = "ChartsDemo-iOS";
+				PROVISIONING_PROFILE_SPECIFIER = "Charts Development";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
 				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/ChartsDemo-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
